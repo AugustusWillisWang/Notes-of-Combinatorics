@@ -104,3 +104,7 @@ $$\omega \lambda \alpha \beta \gamma \phi \delta$$
 大于小于大于等于
 
 $$ \le \leq \ge \geq < > $$
+
+## 导出
+
+$pandoc -N -s --toc --smart --latex-engine=xelatex -V CJKmainfont='PingFang SC' -V mainfont='Monaco' -V geometry:margin=1in note.md -o output.pdf
