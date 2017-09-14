@@ -1,0 +1,174 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper]{geometry}
+\geometry{left=2.0cm,right=2.0cm,top=2.5cm,bottom=2.5cm}
+
+\usepackage{ctex}
+\usepackage{amsmath,amsfonts,graphicx,amssymb,bm,amsthm}
+\usepackage{algorithm,algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{fancyhdr}
+ 
+
+\newcounter{counter_exm}\setcounter{counter_exm}{1}
+%\newcounter{counter_thm}\setcounter{counter_thm}{1}
+%\newcounter{counter_lma}\setcounter{counter_lma}{1}
+%\newcounter{counter_dft}\setcounter{counter_dft}{1}
+%\newcounter{counter_clm}\setcounter{counter_clm}{1}
+%\newcounter{counter_cly}\setcounter{counter_cly}{1}
+
+\newtheorem{theorem}{{\hskip 1.7em \bf 定理}}
+\newtheorem{lemma}[theorem]{\hskip 1.7em 引理}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{\hskip 1.7em 命题}
+\newtheorem{corollary}[theorem]{\hskip 1.7em 推论}
+\newtheorem{definition}[theorem]{\hskip 1.7em 定义}
+
+\renewcommand{\emph}[1]{\begin{kaishu}#1\end{kaishu}}
+
+\newenvironment{solution}{{\noindent\hskip 2em \bf 解 \quad}}
+
+
+\renewenvironment{proof}{{\noindent\hskip 2em \bf 证明 \quad}}{\hfill$\qed$\par}
+\newenvironment{example}{{\noindent\hskip 2em \bf 例 \arabic{counter_exm}\quad}}{\addtocounter{counter_exm}{1}\par}
+
+\newenvironment{concept}[1]{{\bf #1\quad} \begin{kaishu}} {\end{kaishu}\par}
+
+\newcommand\E{\mathbb{E}}
+
+\begin{document}
+    
+    \pagestyle{fancy}
+    \lhead{\kaishu 中国科学院大学}
+    \chead{}
+    \rhead{\kaishu 2017年秋季学期组合数学}
+    
+    \begin{center}
+        {\LARGE \bf 组合数学第一讲}\\
+    \end{center}
+        \begin{kaishu}
+            授课时间: 2017年9月5日\quad
+            授课教师: 孙晓明
+            \hfill 记录人: 高昂
+        \end{kaishu}
+    
+    \section{概念与例子}
+
+    以如下方式陈述概念.
+
+    \begin{concept}{乘法原理}
+        令$S$是对象的有序对$(a, b)$的集合, 其中第一个对象$a$来自大小为$p$的一个集合, 而对于对象$a$的每个选择, 对象$b$有$q$种选择. 于是, $S$的大小为$p\times q$:
+        \[
+            |S|=p\times q
+        \]
+    \end{concept}
+    乘法原理的第二种实用形式是: \emph{如果第一项任务有$p$个结果, 而不论第一项任务的结果如何, 第二项任务都有$q$个结果,那么, 这两项任务连续执行就有$p\times q$个结果.}
+
+    以如下方式举例说明.
+
+    \begin{example}
+        一名学生要修两门课程. 第一门课可以安排在上午3个小时中的任一小时, 第二门课则可以安排在下午4个小时的任一小时. 该学生可能的课程安排数量是$3\times4=12$.
+    \end{example}
+
+    \section{定理及其证明}
+
+    以如下方式陈述定理, 并给出证明.
+    \begin{theorem}
+        设$S$是多重集合, 它有$k$种不同类型的对象, 且每一种类型的有限重复数分别是$n_1,n_2,\cdots,n_k$. 设$S$的大小为$n=n_1+n_2+\cdots+n_k$. 则$S$的排列数目等于
+        \[
+            \frac{n!}{n_1!n_2!\cdots n_k!}.
+        \]
+    \end{theorem}
+    \begin{proof}
+        给定多重集合$S$. 它有$k$种类型对象, 比如说$a_1,a_2,\cdots,a_k$且重复数分别是$n_1,n_2,\cdots,n_k$, 对象总数$n=n_1+n_2+\cdots+n_k$. 我们想要这$n$个对象的排列数量. 可以这样考虑这个问题. 一共有$n$个位置, 而我们想要在每一个位置放置$S$中的一个对象. 首先, 我们确定放置$a_1$的位置. 因为在$S$中$a_1$的数量是$n_1$, 因此必须从$n$个位置的集合中取出$n_1$个位置的子集. 这样做的方法数是${n \choose n_1}$. 下一步, 要确定放置$a_2$的位置. 此时还剩下$n-n_1$个位置, 我们必须从中选取$n_2$个位置来. 这样做的方法数量是${n-n_1\choose n_2}$.再接下来我们有${n-n_1-n_2\choose n_3}$种方法为$a_3$选择位置. 继续这样做下去, 利用乘法原理, 我们发现$S$的排列个数等于
+        \[
+            {n \choose n_1}{n-n_1\choose n_2}{n-n_1-n_2\choose n_3}\cdots {n-n_1-n_2-\cdots-n_{k-1}\choose n_k}.
+        \]
+        使用定理2.3.1, 我们看到上面这个数等于
+        \[
+            \frac{n!}{n_1!n_2!n_3!\cdots n_k!}.
+        \]
+    \end{proof}
+    
+    \newpage
+    多行数学推导推荐使用align和gather环境, 示例如下.
+
+    \begin{example}
+        在集合向量组成的3维实向量空间$V$中, 用几何的方法定义了內积
+        \[
+            (\alpha,\beta)=|\alpha||\beta|\cos\theta
+        \]
+        其中$|\alpha|,|\beta|$是向量$\alpha,\beta$的夹角.
+
+        是否存在向量$\alpha_1,\alpha_2,\alpha_3$满足条件: $(\alpha_1,\alpha_1)=(\alpha_2,\alpha_2)=(\alpha_1,\alpha_2)=1,(\alpha_1,\alpha_2)=2,(\alpha_1,\alpha_3)=3$ 且$(\alpha_1,\alpha_2)=-2$?
+    \end{example}
+    \begin{solution}
+        设有$\alpha_1,\alpha_2,\alpha_3$满足条件, 它们在实数域$\mathbb{R}$上的任意线性组合$\alpha=x\alpha_1+y\alpha_2+z\alpha_3$含于$V$, 应满足条件$(\alpha,\alpha)\geq 0$. 即
+        \begin{align*}
+            (\alpha,\alpha)&=(x\alpha_1+y\alpha_2+z\alpha_3,x\alpha_1+y\alpha_2+z\alpha_3)\\
+                &=x^2(\alpha_1,\alpha_1)+y^2(\alpha_2,\alpha_2)+z^2(\alpha_3,\alpha_3)+2xy(\alpha_1,\alpha_2)+2xz(\alpha_1,\alpha_3)+2yz(\alpha_2,\alpha_3)\\
+                &=x^2+y^2+z^2+4xy-6zx-4yz\geq 0
+        \end{align*}
+        对任意实数$x, y, z$成立.
+
+        将$(\alpha,\alpha)=x^2+y^2+z^2+4xy-6zx-4yz$先当作$x$的二次多项式配方, 再将其中不含$x$的项看做$y$的二次多项式配方, 得
+        \[
+            (\alpha,\alpha)=(x+2y-3z)^2-3(y-\frac{4}{3}z)^2-\frac{8}{3}z^2
+        \]
+        选$z=0,y=1,x=-2$, 则$x+2y-3z=0$, 代入上式得
+        \[
+            (\alpha,\alpha)=-3<0
+        \]
+        矛盾. 因此不存在满足所说条件的向量$\alpha_1,\alpha_2,\alpha_3$.
+    \end{solution}
+
+    \section{其他常用环境}
+
+    \noindent 使用enumerate环境编辑列表, 示例如下.
+    \begin{enumerate}
+        \item[1.] 数学文档中推荐使用英文标点. 用英文标点分割中文字符时, 建议使用"[标点][空格]"的格式;
+        \item[2.] 模板中未介绍的功能, 请参考文档lshort-zh-cn.pdf;
+        \item[3.] 模板中未规定的格式细节, 可自行斟酌.
+    \end{enumerate}
+
+
+    \noindent 使用tabular环境编辑表格, 示例如下.
+
+    \begin{center}
+    \begin{tabular}{|r|l|}
+            \hline
+            授课时间:   &2017年9月5日\\\hline
+            授课人:     &孙晓明\\\hline
+            记录人:     &高昂\\\hline
+            课程内容:   &1) 课程介绍\\\hline
+                        &2) 排列与组合\\\hline
+                        &3) 组合数的定义拓展与应用\\
+            \hline
+    \end{tabular}
+    \end{center}
+
+    \newpage
+    \noindent 使用algorithmic环境编辑伪代码, 示例如下.
+    \begin{algorithm}
+        \caption{Stretch or compress a profile}
+        \begin{algorithmic}
+            \Function{Stretch-or-Compress}{$n,m,k,\sigma_0,i,soc$}
+
+                \If {$i = \lfloor\frac{n+1}{2}\rfloor$}
+                    \For {$j \gets 1$ to $k$}
+                        \State $\sigma_i(p_j) \gets (x_{\sigma_{i-1}(p_j)}+soc,y_{\sigma_{i-1}(p_j)})$
+                    \EndFor
+                \ElsIf {$i = \lfloor\frac{n+3}{2}\rfloor$}
+                    \State $\sigma_{i} \gets \sigma_{i-1}$
+                \EndIf
+                \State \Return $(n+soc,m,k,\sigma_i)$
+            \EndFunction
+        \end{algorithmic}
+    \end{algorithm}
+
+\end{document}
+
+
+
+
+
