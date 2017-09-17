@@ -4,4 +4,16 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+convertline	../notex\dev.py	/^def convertline(line):$/;"	kind:function	line:5
 dev.py	../notex\dev.py	1;"	kind:file	line:1
+file	../notex\dev.py	/^file=open("note.md",encoding='utf-8')$/;"	kind:variable	line:11
+head	../notex\dev.py	/^head=open('filehead.dat','r',encoding='utf-8').read()$/;"	kind:variable	line:17
+lesson	../notex\dev.py	/^lesson=input("lesson:")$/;"	kind:variable	line:13
+name	../notex\dev.py	/^name=input("recoder:")$/;"	kind:variable	line:15
+output	../notex\dev.py	/^output=open('output.tex','w',encoding='gb2312')$/;"	kind:variable	line:60
+paper	../notex\dev.py	/^paper=""$/;"	kind:variable	line:3
+paper	../notex\dev.py	/^paper=paper+head$/;"	kind:variable	line:18
+paper	../notex\dev.py	/^paper=paper+lesson$/;"	kind:variable	line:30
+paper	../notex\dev.py	/^paper=paper+name$/;"	kind:variable	line:42
+paper	../notex\dev.py	/^paper=paper+time$/;"	kind:variable	line:37
+time	../notex\dev.py	/^time=input("time:")$/;"	kind:variable	line:14

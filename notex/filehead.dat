@@ -1,0 +1,37 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper]{geometry}
+\geometry{left=2.0cm,right=2.0cm,top=2.5cm,bottom=2.5cm}
+
+\usepackage{ctex}
+\usepackage{amsmath,amsfonts,graphicx,amssymb,bm,amsthm}
+\usepackage{algorithm,algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{fancyhdr}
+ 
+
+\newcounter{counter_exm}\setcounter{counter_exm}{1}
+%\newcounter{counter_thm}\setcounter{counter_thm}{1}
+%\newcounter{counter_lma}\setcounter{counter_lma}{1}
+%\newcounter{counter_dft}\setcounter{counter_dft}{1}
+%\newcounter{counter_clm}\setcounter{counter_clm}{1}
+%\newcounter{counter_cly}\setcounter{counter_cly}{1}
+
+\newtheorem{theorem}{{\hskip 1.7em \bf 定理}}
+\newtheorem{lemma}[theorem]{\hskip 1.7em 引理}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{\hskip 1.7em 命题}
+\newtheorem{corollary}[theorem]{\hskip 1.7em 推论}
+\newtheorem{definition}[theorem]{\hskip 1.7em 定义}
+
+\renewcommand{\emph}[1]{\begin{kaishu}#1\end{kaishu}}
+
+\newenvironment{solution}{{\noindent\hskip 2em \bf 解 \quad}}
+
+
+\renewenvironment{proof}{{\noindent\hskip 2em \bf 证明 \quad}}{\hfill$\qed$\par}
+\newenvironment{example}{{\noindent\hskip 2em \bf 例 \arabic{counter_exm}\quad}}{\addtocounter{counter_exm}{1}\par}
+
+\newenvironment{concept}[1]{{\bf #1\quad} \begin{kaishu}} {\end{kaishu}\par}
+
+\newcommand\E{\mathbb{E}}

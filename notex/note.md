@@ -6,12 +6,16 @@ BY：王华强 段江飞
 ## 2.乘法原理
 ## 3.排列与组合
 
-一些符号  
+
+@定义 一些符号  
 
 $$P_{n,m}=n(n-1)\cdots(n-m+1)$$  
 $${n \choose k}=\frac{n!}{m!(n-m)!}$$
 $${n \choose m}=0 (m>n)$$  
+@
 
+
+@定理
 原有概念的推广
 
 $${-1 \choose n}=\frac{(-1)(-2)\cdots(-n)}{n!}=(-1)^{n}$$ 
@@ -19,10 +23,14 @@ $${\frac{1}{2} \choose n}=\frac{\frac{1}{2} (\frac{1}{2}-1) \cdots (\frac{1}{2}-
 $$(x+y)^{n}=\sum_{i=0}^{n}{n \choose i}x^{n-i}y^{i}$$  
 $$(1+x)^{n}=\sum_{i=0}^{n}{n \choose i}x^{i}=\sum_{i\ge0}^{}{n \choose i}x^{i}$$  
 $$(1+x)^{-1}=1-x+x^{2}-x^{3}+\cdots=\sum_{i\ge0}^{}(-1)^{i}x^{i}=\sum_{i\ge0}^{}{-1 \choose i}x^{i}$$ 
+@
 
+@例
 推广
 
 $$(1+x)^a=\sum_{i\ge 0}{a\choose i}x^i\quad(|x|<1)$$(a任意)
+
+@
 
 ### 应用1
 
