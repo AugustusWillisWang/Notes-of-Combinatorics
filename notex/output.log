@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.9.14)  17 SEP 2017 14:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.9.14)  17 SEP 2017 17:51
 entering extended mode
 **g:/workpath/Notes-of-Combinatorics/notex/output
 (g:/workpath/Notes-of-Combinatorics/notex/output.tex
@@ -643,13 +643,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ] [2] [3] [4] (g:\workpath\Notes-of-Combinatorics\notex\output.aux) ) 
 Here is how much of TeX's memory you used:
- 10612 strings out of 495354
- 162574 string characters out of 3183859
+ 10610 strings out of 495354
+ 162562 string characters out of 3183859
  212797 words of memory out of 3000000
- 13504 multiletter control sequences out of 15000+200000
- 40363 words of font info for 141 fonts, out of 3000000 for 9000
+ 13502 multiletter control sequences out of 15000+200000
+ 38966 words of font info for 135 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 36i,12n,43p,911b,507s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,12n,43p,911b,509s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOW
 S/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C
 :/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsu
@@ -663,30 +663,30 @@ WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simkai.
 ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts
 /simkai.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDO
 WS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><
-C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/sims
-un.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fo
+C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simh
+ei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fo
 nts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WI
-NDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.tt
+NDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simkai.tt
 f><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/s
-imkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
+imkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS
 /Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:
-/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simkai
+/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei
 .ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Font
 s/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WIND
 OWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf>
 <C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/sim
-kai.ttf><G:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><G:/CTEX/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><G:/CTEX/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmex10.pfb><G:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><G:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><G:/CTEX/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb><G:/CTEX/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><G:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><G:/C
-TEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><G:/CTEX/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb><G:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-sy8.pfb>
-Output written on output.pdf (4 pages, 374935 bytes).
+kai.ttf><C:/WINDOWS/Fonts/simkai.ttf><G:/CTEX/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb><G:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><G:/C
+TEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><G:/CTEX/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><G:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmmi12.pfb><G:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><G:/CTEX/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><G:/CTEX/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><G:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><G:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><G:/CTEX/MiKTeX/font
+s/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on output.pdf (4 pages, 376359 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
+ 327 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

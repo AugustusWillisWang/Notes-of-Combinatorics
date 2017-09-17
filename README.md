@@ -1,6 +1,8 @@
 # 组合数学笔记
 
-整理用 Markdown 与 Latex简要 cheatbook
+使用markdown与latex进行排版
+
+使用mdconverter.py来将markdown转为按模板格式的tex文档并导出
 
 ## Markdown语法
 

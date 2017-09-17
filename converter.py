@@ -1,22 +1,47 @@
-#read file in lines
+import sys
 
+#read file in line
+#建立全局变量
 paper=""
-insection=0
-inalign=0
+insection=[0]
 
+#在输出缓冲区paper中加入新内容
 def add(addon):
     global paper
     paper=paper+addon
 
+#正文逐行处理函数
 def convertline(line):
     global paper
     global insection
+
+    if "####" in line:
+        paper=paper+r'''    
+    \subsubsection{'''
+
+        add(line[5:])
+    
+        paper=paper+r'''}
+
+'''
+        return 0
+
+    if "###" in line:
+        paper=paper+r'''    
+    \subsection{'''
+
+        add(line[4:])
+    
+        paper=paper+r'''}
+
+'''
+        return 0
 
     if "##" in line:
         paper=paper+r'''    
     \section{'''
 
-        paper=paper+line[3:]
+        add(line[3:])
     
         paper=paper+r'''}
 
@@ -36,76 +61,76 @@ def convertline(line):
     if "@" in line:
 
         #定义
-        if insection==0 and "定义" in line:
-            insection="定义"
+        if "定义" in line:
+            insection.append("定义")
             name=line[4:]
             add(r'''
     \begin{concept}{'''+name+r'''}
  ''')
             return 0
 
-        if insection=="定义":
+        if insection[-1]=="定义":
             add(r'''
     \end{concept}
  ''')
-            insection = 0
+            insection.pop()
             return 0
 
         #例
-        if (insection == 0 and "例" in line):
-            insection="例"
+        if ("例" in line):
+            insection.append("例")
             add(r'''
     \begin{example}
     ''')
             return 0
 
 
-        if (insection=="例"):
+        if (insection[-1]=="例"):
             add(r'''    
     \end{example}
 ''')
-            insection = 0
+            insection.pop()
             return 0
 
         #定理
-        if(insection == 0 and "定理" in line):
-            insection = "定理"
+        if("定理" in line):
+            insection.append("定理")
             add(r'''
     \begin{theorem}
 ''')
             return 0
         
-        if(insection=="定理"):
-            insection=0
+        if(insection[-1]=="定理"):
+            insection.pop()
             add(r'''
     \end{theorem}
 ''')
             return 0
 
         #证明
-        if(insection==0 and "证明" in line):
-            insection="证明"
+        if("证明" in line):
+            insection.append("证明")
             add(r'''
     \begin{proof}
 ''')
             return 0
 
-        if(insection=="证明"):
-            insection=0
+        if(insection[-1]=="证明"):
+            insection.pop()
             add(r'''
     \end{proof}
 ''')
             return 0
 
         #解
-        if(insection ==0 and "解" in line):
-            insection="解"
+        if("解" in line):
+            insection.append("解")
             add(r'''
     \begin{solution}
 ''')
             return 0
 
-        if(insection=="解"):
+        if(insection[-1]=="解"):
             add(r''' \end{solution}
 ''')
             return 0
@@ -118,7 +143,17 @@ def convertline(line):
 
 
 #写文件头
-file=open("note.md",encoding='utf-8')
+if(len(sys.argv)>1):
+    file_to_open=sys.argv[1]
+else:
+    file_to_open="note.md"
+
+if(len(sys.argv)>2):
+    _encoding=sys.argv[2]
+else:
+    _encoding="utf-8"
+
+file=open(file_to_open,encoding=_encoding)
 
 lesson=input("lesson:")
 time=input("time:")
