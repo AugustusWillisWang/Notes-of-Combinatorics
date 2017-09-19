@@ -1,0 +1,213 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper]{geometry}
+\geometry{left=2.0cm,right=2.0cm,top=2.5cm,bottom=2.5cm}
+
+\usepackage{ctex}
+\usepackage{amsmath,amsfonts,graphicx,amssymb,bm,amsthm}
+\usepackage{algorithm,algorithmicx}
+\usepackage[noend]{algpseudocode}
+\usepackage{fancyhdr}
+ 
+
+\newcounter{counter_exm}\setcounter{counter_exm}{1}
+%\newcounter{counter_thm}\setcounter{counter_thm}{1}
+%\newcounter{counter_lma}\setcounter{counter_lma}{1}
+%\newcounter{counter_dft}\setcounter{counter_dft}{1}
+%\newcounter{counter_clm}\setcounter{counter_clm}{1}
+%\newcounter{counter_cly}\setcounter{counter_cly}{1}
+
+\newtheorem{theorem}{{\hskip 1.7em \bf 定理}}
+\newtheorem{lemma}[theorem]{\hskip 1.7em 引理}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{\hskip 1.7em 命题}
+\newtheorem{corollary}[theorem]{\hskip 1.7em 推论}
+\newtheorem{definition}[theorem]{\hskip 1.7em 定义}
+
+\renewcommand{\emph}[1]{\begin{kaishu}#1\end{kaishu}}
+
+\newenvironment{solution}{{\noindent\hskip 2em \bf 解 \quad}}
+
+
+\renewenvironment{proof}{{\noindent\hskip 2em \bf 证明 \quad}}{\hfill$\qed$\par}
+\newenvironment{example}{{\noindent\hskip 2em \bf 例 \arabic{counter_exm}\quad}}{\addtocounter{counter_exm}{1}\par}
+
+\newenvironment{concept}[1]{{\bf #1\quad} \begin{kaishu}} {\end{kaishu}\par}
+
+\newcommand\E{\mathbb{E}}
+\begin{document}
+    
+    \pagestyle{fancy}
+    \lhead{\kaishu 中国科学院大学}
+    \chead{}
+    \rhead{\kaishu 2017年秋季学期组合数学}
+    
+    \begin{center}
+        {\LARGE \bf 组合数学第1讲}\\
+    \end{center}
+        \begin{kaishu}
+            授课时间: 2017.9.5\quad
+            授课教师: 孙晓明
+            \hfill 记录人: 王华强 段江飞        \end{kaishu} \par
+    
+    \section{加法原理(略)
+}
+
+    
+    \section{乘法原理(略)
+}
+
+    
+    \section{排列与组合
+}
+
+
+
+    \begin{concept}{一些符号  
+}
+ 
+$$P_{n,m}=n(n-1)\cdots(n-m+1)$$  
+$${n \choose k}=\frac{n!}{m!(n-m)!}$$
+$${n \choose m}=0 (m>n)$$  
+
+    \end{concept}
+ 
+原有概念的推广
+
+$${-1 \choose n}=\frac{(-1)(-2)\cdots(-n)}{n!}=(-1)^{n}$$ 
+$${\frac{1}{2} \choose n}=\frac{\frac{1}{2} (\frac{1}{2}-1) \cdots (\frac{1}{2}-n+1)}{n!}=\frac{(-1)^{n-1} (2n-2)!} {2^{2n-1} n!(n-1)!}=\frac{(-1)^{n-1} {2n-1 \choose n-1}}{2^{2n-1} n}$$  
+$$(x+y)^{n}=\sum_{i=0}^{n}{n \choose i}x^{n-i}y^{i}$$  
+$$(1+x)^{n}=\sum_{i=0}^{n}{n \choose i}x^{i}=\sum_{i\ge0}^{}{n \choose i}x^{i}$$  
+$$(1+x)^{-1}=1-x+x^{2}-x^{3}+\cdots=\sum_{i\ge0}^{}(-1)^{i}x^{i}=\sum_{i\ge0}^{}{-1 \choose i}x^{i}$$ 
+
+推广
+
+$$(1+x)^a=\sum_{i\ge 0}{a\choose i}x^i\quad(|x|<1)$$(a任意)
+
+
+    \begin{example}
+    
+$${n\choose 0}+{n\choose 1}+...+{n\choose n}=(1+1)^n=2^{n}$$
+
+$${n\choose 0}-{n\choose 1}+...+{n\choose n}=(1-1)^n=0$$
+
+$${n\choose 0}+{n\choose 2}+...+{n\choose 2*\lfloor n\rfloor}=2^{n-1}$$
+
+$${n\choose 1}+{n\choose 3}+...+{n\choose 2*\lfloor n\rfloor}=2^{n-1}$$
+    
+    \end{example}
+
+
+    \begin{example}
+    
+$$\sum_(i\ge 0){n\choose 3i}$$
+
+考虑1的三次单位根 1  $\quad\omega1 \quad \omega2$
+
+其中
+
+$$\omega1=e^{\pi*2i/3} \quad \omega2=e^{\pi*4i/3}$$
+
+$$\omega1^3=1$$
+
+于是可以展开$(1+\omega)^n,(1+\omega^2)^n,(1+1)^n$
+
+由($1+\omega+\omega^2=0$)得
+
+$$\sum_{i\ge0}{n\choose3i}=\frac{(1+\omega)^n+(1+\omega^2)^n+(1+1)^n}{3}$$
+    
+    \end{example}
+
+练习: 化简上式
+
+
+    \begin{example}
+    求和 $\sum_{i\ge0}^{}i{n \choose i}={n \choose 1}+2{n \choose 2} +\cdots+n{n \choose n}= ?$
+对$(1+x)^{n}=\sum_{i\ge0}{n \choose i}x^{i}$求导得到
+
+$$n(1+x)^{n-1}=\sum_{i\ge0}^{}i{n \choose i}x^{i-1}={n \choose 1}+2{n \choose 2}x+\cdots+n{n \choose n}x^{n-1}$$  
+令$x=1$得到
+
+$$\sum_{i\ge0}^{}i{n \choose i}={n \choose 1}+2{n \choose 2}+\cdots+n{n \choose n}=n\cdot2^{n-1}$$  
+    
+    \end{example}
+
+    
+    \section{Vandermonde恒等式
+}
+
+
+
+    \begin{theorem}
+
+$\underbrace{\sum_{i=0}^{k}{n \choose i}{m \choose k-i}={n+m \choose k}}_{Vandermonde \quad formula}$  
+
+    \end{theorem}
+
+
+    \begin{proof}
+$(1+x)^{n}(1+x)^{m}=(1+x)^{m+n}$
+$(\sum_{i\ge0}^{}{n \choose i}x^{i})(\sum_{j\ge0}^{}{m \choose j}x^{j})=(\sum_{k\ge0}^{}{n+m \choose k}x^{k})$ 
+$\underbrace{\Rightarrow\sum_{i=0}^{k}{n \choose i}{m \choose k-i}={n+m \choose k}}_{Vandermonde \quad formula}$  
+令$m=n=k$可得
+
+$${n \choose 0}^{2}+{n \choose 1}^{2}+\cdots+{n \choose n}^{2}={2n \choose n}^{2}=2^{2n}-2\sum_{i=0}^{n-1}{2n \choose i}$$
+
+    \end{proof}
+
+
+
+    \begin{theorem}
+
+在杨辉三角中，各组合数有依据位置的关系
+
+写成公式形式：
+
+$${k\choose k}+{k+1 \choose k}+{k+2\choose k}+...+{n\choose k}={n+1\choose k+1}$$
+
+即朱世杰恒等式
+
+    \end{theorem}
+
+    
+    \section{组合数的多项式性质
+}
+
+
+考察
+
+$$1^2+2^2+3^2+...+n^2=\frac{n*(n(+1)*(2n-1)}{6}$$
+
+其可用组合数的性质证明如下：
+
+
+    \begin{proof}
+
+$$ \sum{k\choose 2}=\sum\frac{k(k+1)}{2}=\sum(k^2/2-k/2)$$(1)
+$$\sum_{k=1}^{n}k^2=2\sum_{k=1}^{n}{k\choose 2}+\sum_{k=1}^n k$$(2)
+
+    \end{proof}
+
+
+    \begin{example}
+    $1^3+2^3+3^3+...+n^3=?$
+    
+    \end{example}
+
+Tips: 
+
+$$x^2=x(x-1)+x=2{x\choose 2}+{x\choose 1}$$(1)
+
+$$x^3=6{x\choose 3}+2{x\choose 2}+{x\choose 1}$$(2)
+
+$$x^k==?{x\choose n}+...+?{x\choose 1}$$(3)
+
+可以发现
+
+$${x\choose n},...,{x\choose 1}$$(4)
+
+是一组线性无关的基.
+
+思考：见作业1
+\end{document}
+

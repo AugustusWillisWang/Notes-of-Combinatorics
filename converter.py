@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import subprocess
 import sys
 
 #read file in line
@@ -159,6 +163,9 @@ lesson=input("lesson:")
 time=input("time:")
 name=input("recoder:")
 
+if(name==""):
+    name="王华强\quad段江飞"
+
 # head=open('filehead.dat','r',encoding='utf-8').read()
 # paper=paper+head
 
@@ -225,7 +232,7 @@ paper=paper+r'''\quad
             \hfill 记录人: '''
 paper=paper+name
 
-paper=paper+r'''        \end{kaishu}'''
+paper=paper+r'''        \end{kaishu} \par'''
 
 #逐行处理
 while True:
@@ -246,4 +253,11 @@ output.write(paper)
 
 output.close()
 file.close()
+
+#转换为pdf
+# os.system('pdflatex output.tex %DOC%')
+log=subprocess.call(r"pdflatex output.tex %DOC%",shell=True)
+print(log)
+subprocess.call("pause")
+input()
 

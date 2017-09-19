@@ -8,6 +8,29 @@
 
 参见<http://www.appinn.com/markdown/>
 
+## 附加语法
+
+@定义 要定义的概念
+......
+@
+
+@例
+......
+@
+
+@定理
+......
+@
+
+@证明
+......
+@
+
+@解
+......
+@
+
+
 ## Latex语法
 
 参见<http://blog.csdn.net/zdk930519/article/details/54137476>

@@ -4,53 +4,44 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-add	../mdconverter.py	/^def add(addon):$/;"	kind:function	line:7
-add	../notex\dev.py	/^def add(addon):$/;"	kind:function	line:7
-convertline	../mdconverter.py	/^def convertline(line):$/;"	kind:function	line:11
-convertline	../notex\dev.py	/^def convertline(line):$/;"	kind:function	line:11
+_encoding	../converter.py	/^    _encoding="utf-8"$/;"	kind:variable	line:158
+_encoding	../converter.py	/^    _encoding=sys.argv[2]$/;"	kind:variable	line:156
+_encoding	../notex\dev.py	/^    _encoding="utf-8"$/;"	kind:variable	line:154
+_encoding	../notex\dev.py	/^    _encoding=sys.argv[2]$/;"	kind:variable	line:152
+add	../converter.py	/^def add(addon):$/;"	kind:function	line:13
+add	../notex\dev.py	/^def add(addon):$/;"	kind:function	line:9
+converter.py	../converter.py	1;"	kind:file	line:1
+convertline	../converter.py	/^def convertline(line):$/;"	kind:function	line:18
+convertline	../notex\dev.py	/^def convertline(line):$/;"	kind:function	line:14
 dev.py	../notex\dev.py	1;"	kind:file	line:1
-file	../mdconverter.py	/^file=open("note.md",encoding='utf-8')$/;"	kind:variable	line:121
-file	../notex\dev.py	/^file=open("note.md",encoding='utf-8')$/;"	kind:variable	line:121
-inalign	../mdconverter.py	/^inalign=0$/;"	kind:variable	line:5
-inalign	../notex\dev.py	/^inalign=0$/;"	kind:variable	line:5
-insection	../mdconverter.py	/^            insection = "定理"$/;"	kind:variable	line:72
-insection	../mdconverter.py	/^            insection = 0$/;"	kind:variable	line:51
-insection	../mdconverter.py	/^            insection = 0$/;"	kind:variable	line:67
-insection	../mdconverter.py	/^            insection="例"$/;"	kind:variable	line:56
-insection	../mdconverter.py	/^            insection="定义"$/;"	kind:variable	line:40
-insection	../mdconverter.py	/^            insection="解"$/;"	kind:variable	line:102
-insection	../mdconverter.py	/^            insection="证明"$/;"	kind:variable	line:87
-insection	../mdconverter.py	/^            insection=0$/;"	kind:variable	line:79
-insection	../mdconverter.py	/^            insection=0$/;"	kind:variable	line:94
-insection	../mdconverter.py	/^insection=0$/;"	kind:variable	line:4
-insection	../notex\dev.py	/^            insection = "定理"$/;"	kind:variable	line:72
-insection	../notex\dev.py	/^            insection = 0$/;"	kind:variable	line:51
-insection	../notex\dev.py	/^            insection = 0$/;"	kind:variable	line:67
-insection	../notex\dev.py	/^            insection="例"$/;"	kind:variable	line:56
-insection	../notex\dev.py	/^            insection="定义"$/;"	kind:variable	line:40
-insection	../notex\dev.py	/^            insection="解"$/;"	kind:variable	line:102
-insection	../notex\dev.py	/^            insection="证明"$/;"	kind:variable	line:87
-insection	../notex\dev.py	/^            insection=0$/;"	kind:variable	line:79
-insection	../notex\dev.py	/^            insection=0$/;"	kind:variable	line:94
-insection	../notex\dev.py	/^insection=0$/;"	kind:variable	line:4
-lesson	../mdconverter.py	/^lesson=input("lesson:")$/;"	kind:variable	line:123
-lesson	../notex\dev.py	/^lesson=input("lesson:")$/;"	kind:variable	line:123
-line	../mdconverter.py	/^    line =file.readline()$/;"	kind:variable	line:197
-line	../notex\dev.py	/^    line =file.readline()$/;"	kind:variable	line:197
-mdconverter.py	../mdconverter.py	1;"	kind:file	line:1
-name	../mdconverter.py	/^            name=line[4:]$/;"	kind:variable	line:41
-name	../mdconverter.py	/^name=input("recoder:")$/;"	kind:variable	line:125
-name	../notex\dev.py	/^            name=line[4:]$/;"	kind:variable	line:41
-name	../notex\dev.py	/^name=input("recoder:")$/;"	kind:variable	line:125
-output	../mdconverter.py	/^output=open('output.tex','w',encoding='gb2312')$/;"	kind:variable	line:209
-output	../notex\dev.py	/^output=open('output.tex','w',encoding='gb2312')$/;"	kind:variable	line:209
-paper	../mdconverter.py	/^paper=""$/;"	kind:variable	line:3
-paper	../mdconverter.py	/^paper=paper+lesson$/;"	kind:variable	line:179
-paper	../mdconverter.py	/^paper=paper+name$/;"	kind:variable	line:191
-paper	../mdconverter.py	/^paper=paper+time$/;"	kind:variable	line:186
-paper	../notex\dev.py	/^paper=""$/;"	kind:variable	line:3
-paper	../notex\dev.py	/^paper=paper+lesson$/;"	kind:variable	line:179
-paper	../notex\dev.py	/^paper=paper+name$/;"	kind:variable	line:191
-paper	../notex\dev.py	/^paper=paper+time$/;"	kind:variable	line:186
-time	../mdconverter.py	/^time=input("time:")$/;"	kind:variable	line:124
-time	../notex\dev.py	/^time=input("time:")$/;"	kind:variable	line:124
+file	../converter.py	/^file=open(file_to_open,encoding=_encoding)$/;"	kind:variable	line:160
+file	../notex\dev.py	/^file=open(file_to_open,encoding=_encoding)$/;"	kind:variable	line:156
+file_to_open	../converter.py	/^    file_to_open="note.md"$/;"	kind:variable	line:153
+file_to_open	../converter.py	/^    file_to_open=sys.argv[1]$/;"	kind:variable	line:151
+file_to_open	../notex\dev.py	/^    file_to_open="note.md"$/;"	kind:variable	line:149
+file_to_open	../notex\dev.py	/^    file_to_open=sys.argv[1]$/;"	kind:variable	line:147
+insection	../converter.py	/^insection=[0]$/;"	kind:variable	line:10
+insection	../notex\dev.py	/^insection=[0]$/;"	kind:variable	line:6
+lesson	../converter.py	/^lesson=input("lesson:")$/;"	kind:variable	line:162
+lesson	../notex\dev.py	/^lesson=input("lesson:")$/;"	kind:variable	line:158
+line	../converter.py	/^    line =file.readline()$/;"	kind:variable	line:239
+line	../notex\dev.py	/^    line =file.readline()$/;"	kind:variable	line:232
+log	../converter.py	/^log=subprocess.call(r"pdflatex output.tex %DOC%",shell=True)$/;"	kind:variable	line:259
+name	../converter.py	/^    name="王华强\\quad段江飞"$/;"	kind:variable	line:167
+name	../converter.py	/^name=input("recoder:")$/;"	kind:variable	line:164
+name	../notex\dev.py	/^name=input("recoder:")$/;"	kind:variable	line:160
+output	../converter.py	/^output=open('output.tex','w',encoding='gb2312')$/;"	kind:variable	line:251
+output	../notex\dev.py	/^output=open('output.tex','w',encoding='gb2312')$/;"	kind:variable	line:244
+paper	../converter.py	/^paper=""$/;"	kind:variable	line:9
+paper	../converter.py	/^paper=paper+lesson$/;"	kind:variable	line:221
+paper	../converter.py	/^paper=paper+name$/;"	kind:variable	line:233
+paper	../converter.py	/^paper=paper+time$/;"	kind:variable	line:228
+paper	../notex\dev.py	/^paper=""$/;"	kind:variable	line:5
+paper	../notex\dev.py	/^paper=paper+lesson$/;"	kind:variable	line:214
+paper	../notex\dev.py	/^paper=paper+name$/;"	kind:variable	line:226
+paper	../notex\dev.py	/^paper=paper+time$/;"	kind:variable	line:221
+subprocess	../converter.py	/^import subprocess$/;"	kind:namespace	line:4
+sys	../converter.py	/^import sys$/;"	kind:namespace	line:5
+sys	../notex\dev.py	/^import sys$/;"	kind:namespace	line:1
+time	../converter.py	/^time=input("time:")$/;"	kind:variable	line:163
+time	../notex\dev.py	/^time=input("time:")$/;"	kind:variable	line:159
